@@ -337,8 +337,8 @@ class TSPGUI:
     def generate_random_matrix(self):
         try:
             size = int(self.entry_1.get())
-            if size < 8 or size > 16:
-                raise ValueError("El tamaño debe estar entre 8 y 16")
+            if size < 5 or size > 16:
+                raise ValueError("El tamaño debe estar entre 5 y 16")
             
             self.solver.generate_random_matrix(size)
             messagebox.showinfo("Éxito", f"Matriz aleatoria de {size}x{size} generada exitosamente.")
@@ -349,8 +349,8 @@ class TSPGUI:
     def open_manual_input_window(self):
         try:
             size = int(self.entry_1.get())
-            if size < 8 or size > 16:
-                raise ValueError("El tamaño debe estar entre 8 y 16")
+            if size < 5 or size > 16:
+                raise ValueError("El tamaño debe estar entre 5 y 16")
             
             input_window = tk.Toplevel(self.window)
             input_window.title("Ingreso Manual de la Matriz")
